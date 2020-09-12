@@ -7,8 +7,4 @@
   The abbreviated version of the word should have the first letter, then the number of removed characters, then the last letter (eg. "elephant ride" => "e6t r2e").
 */
 
-function abbreviate(string) {
-  return string.replace(/\w{4,}/g, word => {
-    return word[0] + (word.length - 2) + word.slice(-1);
-  });
-}
+const abbreviate = string => string.replace(/\w{4,}/g, word => word[0] + (word.length - 2) + word.slice(-1));
