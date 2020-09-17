@@ -19,14 +19,14 @@ For example:
  persistence(4) # returns 0, because 4 is already a one-digit number
  """
  
- def persistence(n):
-    n_len = len(str(n))
+def persistence(n):
+    n_str = str(n)
     
-    if n_len == 1:
+    if len(n_str) == 1:
         return 0;
     
     total = 1
-    for x in str(n):
+    for x in n_str:
         total = total * int(x)
     
     return 1 + persistence(total)
