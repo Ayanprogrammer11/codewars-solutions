@@ -29,6 +29,18 @@ def printer_error(s):
     
 # OR
 
+def printer_error(s):
+    alphabet = list("abcdefghijklm")
+    invalid_chars = []
+    
+    for char in list(s):
+        if char not in alphabet:
+            invalid_chars.append(char)
+            
+    return str(len(invalid_chars)) + '/' + str(len(s))
+
+# OR
+
 from re import sub
 def printer_error(s):
     return "{}/{}".format(len(sub("[a-m]",'',s)),len(s))
