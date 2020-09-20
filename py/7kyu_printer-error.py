@@ -37,7 +37,7 @@ def printer_error(s):
         if char not in alphabet:
             invalid_chars.append(char)
             
-    return str(len(invalid_chars)) + '/' + str(len(s))
+    return "{}/{}".format(str(len(invalid_chars)),str(len(s)))
 
 # OR
 
